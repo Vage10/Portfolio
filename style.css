@@ -19,7 +19,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #d2e4ea;
+  color: #c94463;
   text-decoration: none;
   font-weight: 600;
 }
@@ -57,7 +57,7 @@ nav ul li a:hover {
 .btn {
   display: inline-block;
   padding: 0.7rem 1.5rem;
-  background-color: #d0e1e9;
+  background-color: #c94463;
   color: #1a1a1a;
   border-radius: 5px;
   text-decoration: none;
@@ -65,10 +65,14 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background-color: #dac4d5;
+  background-color: #c0c0c0;
 }
 
 .project-card a {
-  color: bisque;
+  color: #c94463;
+  text-decoration: none;
+}
+.experience-card a {
+  color: #c94463;
   text-decoration: none;
 }
