@@ -76,3 +76,28 @@ nav ul li a:hover {
   color: #c94463;
   text-decoration: none;
 }
+
+@keyframes rotateSkill {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #444;
+  margin: 0.5rem;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skill i {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  color: #c94463;
+  animation: rotateSkill 4s linear infinite;
+}
