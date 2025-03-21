@@ -2,7 +2,16 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1a1a1a;
+  background: linear-gradient(
+    135deg,
+    #0f0c29,
+    #0c0183,
+    #1e1e30,
+    #0c0183,
+    #1e1e30,
+    #0c0183,
+    #1e1e30
+  );
   color: #fff;
 }
 
@@ -11,7 +20,6 @@ nav ul {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  background-color: #333;
 }
 
 nav ul li {
@@ -19,9 +27,9 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #c94463;
   text-decoration: none;
   font-weight: 600;
+  color: white;
 }
 
 nav ul li a:hover {
@@ -35,33 +43,33 @@ nav ul li a:hover {
 }
 
 .hero-content {
+  margin-top: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.image img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-.skills-grid,
-.project-card,
-.experience-card {
-  background-color: #333;
-  padding: 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  display: inline-block;
+.bt {
   padding: 0.7rem 1.5rem;
   background-color: #c94463;
   color: #1a1a1a;
-  border-radius: 5px;
+  border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s;
+  margin-left: 454px;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #c94463;
+  color: #1a1a1a;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.para {
+  margin-left: 375px;
 }
 
 .btn:hover {
@@ -77,27 +85,63 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-@keyframes rotateSkill {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #444;
-  margin: 0.5rem;
+.skills {
   text-align: center;
-  transition: transform 0.5s ease-in-out;
+  padding: 50px 20px;
+}
+.skills h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.skill.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animated-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #c94463;
+  width: 0;
+  animation: smoothTyping 3s ease-out forwards, blink 0.75s step-end infinite;
 }
 
-.skill i {
-  margin-right: 0.5rem;
-  font-size: 2rem;
-  color: #c94463;
-  animation: rotateSkill 4s linear infinite;
+@keyframes smoothTyping {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #c94463;
+  }
 }
