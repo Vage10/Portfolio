@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vageshwari Chaudhary - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -32,14 +32,12 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>Vageshwari Chaudhary</h1>
-            <p>
-              Computer Science Engineer | Web Developer | Blockchain Enthusiast
+            <p class="para">Bringing Ideas to Life Through Software</p>
+            <p class="animated-text">
+              Hi, I am Vageshwari Chaudhary, a Software
+              <span style="color: #c94463">Engineer.</span>
             </p>
-            <a href="#projects" class="btn">View My Work</a>
-          </div>
-          <div class="image">
-            <img src="images/mypic.jpg" alt="pic" />
+            <a href="#projects" class="bt">View My Work</a>
           </div>
         </div>
       </div>
@@ -57,19 +55,15 @@
       </div>
     </section>
 
-    <section id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill"><i class="fa-solid fa-code"></i> C/C++</div>
-          <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
-          <div class="skill"><i class="fa-brands fa-react"></i> React JS</div>
-          <div class="skill">
-            <i class="fa-brands fa-ethereum"></i> Solidity
-          </div>
-          <div class="skill"><i class="fa-solid fa-database"></i> MySQL</div>
-          <div class="skill"><i class="fa-solid fa-cube"></i> Blockchain</div>
-        </div>
+    <section id="skills" class="skills">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Blockchain</div>
+        <div class="skill">Python</div>
       </div>
     </section>
 
@@ -194,5 +188,22 @@
         >
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const skills = document.querySelectorAll(".skill");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        skills.forEach((skill) => observer.observe(skill));
+      });
+    </script>
   </body>
 </html>
